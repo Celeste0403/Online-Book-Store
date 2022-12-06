@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>The Island Bookstore</title>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-sm bg-dark bg-opacity-75 navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="./images/logo.png"
+              alt="logo"
+              class="img-fluid rounded-circle"
+            />
+            THE ISLAND BOOKSTORE</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#store">Cart</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <h1 class="text-center">Best Sellers</h1>
+
+      <div>
+        <!-- <ul>
+                <li><a class="add-to-cart text-light" href="#" data-name="Apple" data-price="40.00">Apple ₱40.00</a></li>
+                <li><a class="add-to-cart text-light" href="#" data-name="Banana" data-price="50.00">Banana ₱50.00</a></li>
+                <li><a class="add-to-cart text-light" href="#" data-name="Grapes" data-price="250.00">Grapes ₱250.00</a></li>
+                <li><a class="add-to-cart text-light" href="#" data-name="Orange" data-price="25.00">Orange ₱15.00</a></li>
+            </ul> -->
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-3">
+              <div class="card p-1" style="width: 200px">
+                <img
+                  class="card-img-top"
+                  src="./images/book1.jpg"
+                  alt="Card image"
+                  style="width: 100%"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Book 1</h5>
+                  <p class="card-text">P150.00</p>
+                  <a
+                    class="add-to-cart text-primary"
+                    href="#"
+                    data-name="Book 1"
+                    data-price="150.00"
+                    ><button type="button" class="btn btn-primary">
+                      Add to Cart
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card p-1" style="width: 200px">
+                <img
+                  class="card-img-top"
+                  src="./images/book2.jpg"
+                  alt="Card image"
+                  style="width: 100%"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Book 2</h5>
+                  <p class="card-text">P200.00</p>
+                  <a
+                    class="add-to-cart text-primary text-center"
+                    href="#"
+                    data-name="Book 2"
+                    data-price="200.00"
+                    ><button type="button" class="btn btn-primary">
+                      Add to Cart
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card p-1" style="width: 200px">
+                <img
+                  class="card-img-top"
+                  src="./images/book 3.jpg"
+                  alt="Card image"
+                  style="width: 100%"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Book 3</h5>
+                  <p class="card-text">P300.00</p>
+                  <a
+                    class="add-to-cart text-primary"
+                    href="#"
+                    data-name="Book 3"
+                    data-price="300.00"
+                    ><button type="button" class="btn btn-primary">
+                      Add to Cart
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card p-1" style="width: 200px">
+                <img
+                  class="card-img-top"
+                  src="./images/book4.jpg"
+                  alt="Card image"
+                  style="width: 100%"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Book 4</h5>
+                  <p class="card-text">P400.00</p>
+                  <a
+                    class="add-to-cart text-primary"
+                    href="#"
+                    data-name="Book 4"
+                    data-price="400.00"
+                    ><button type="button" class="btn btn-primary">
+                      Add to Cart
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container bg-dark" id="store">
+          <h1 class="text-light text-center">Your Cart</h1>
+</div>
+
+          <div class="container bg-dark bg-opacity-25 text-center">
+
+
+        <div class="text-center">
+          <ul id="show-cart">
+            <li>?????</li>
+          </ul>
+          <div>You have <span id="count-cart">x</span> items in your cart</div>
+          <div>Total: ₱<span id="total-cart"></span></div>
+          
+            <button type="button" class="btn btn-success" id="clear-cart">Clear</button>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+    <script src="shoppingCart.js"></script>
+
+    <script>
+      $(".add-to-cart").click(function (event) {
+        event.preventDefault();
+        var name = $(this).attr("data-name");
+        var price = Number($(this).attr("data-price"));
+
+        shoppingCart.addItemToCart(name, price, 1);
+        displayCart();
+      });
+
+      $("#clear-cart").click(function (event) {
+        shoppingCart.clearCart();
+        displayCart();
+      });
+
+      function displayCart() {
+        var cartArray = shoppingCart.listCart();
+        console.log(cartArray);
+        var output = "";
+
+        for (var i in cartArray) {
+          output +=
+            "<h5>" +
+            cartArray[i].name +
+            " <input class='item-count form-control text-center' type='number' data-name='" +
+            cartArray[i].name +
+            "' value='" +
+            cartArray[i].count +
+            "' >" +
+            " x " +
+            cartArray[i].price +
+            " = " +
+            cartArray[i].total +
+            " <button class='plus-item btn btn-primary' data-name=''" +
+            cartArray[i].name +
+            "'>+</button>" +
+            " <button class='subtract-item btn btn-secondary' data-name='" +
+            cartArray[i].name +
+            "'>-</button>" +
+            " <button class='delete-item btn btn-danger' data-name='" +
+            cartArray[i].name +
+            "'>remove</button>" +
+            "</h5>";
+        }
+
+        $("#show-cart").html(output);
+        $("#count-cart").html(shoppingCart.countCart());
+        $("#total-cart").html(shoppingCart.totalCart());
+      }
+
+      $("#show-cart").on("click", ".delete-item", function (event) {
+        var name = $(this).attr("data-name");
+        shoppingCart.removeItemFromCartAll(name);
+        displayCart();
+      });
+
+      $("#show-cart").on("click", ".subtract-item", function (event) {
+        var name = $(this).attr("data-name");
+        shoppingCart.removeItemFromCart(name);
+        displayCart();
+      });
+
+      $("#show-cart").on("click", ".plus-item", function (event) {
+        var name = $(this).attr("data-name");
+        shoppingCart.addItemToCart(name, 0, 1);
+        displayCart();
+      });
+
+      $("#show-cart").on("change", ".item-count", function (event) {
+        var name = $(this).attr("data-name");
+        var count = Number($(this).val());
+        shoppingCart.setCountForItem(name, count);
+        displayCart();
+      });
+
+      displayCart();
+    </script>
+  </body>
+</html>
